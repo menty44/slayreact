@@ -26,6 +26,37 @@ class App extends Component {
                   <Link to={'/'} className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
+                  <Link to={'/services'} className="nav-link">Services</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">SMS</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Users</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Advertisements</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Finance</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Chats</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Issues</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Logout</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Login</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/'} className="nav-link">Register</Link>
+                </li>
+                
+                {/* <li className="nav-item">
                   <Link to={'/gender/index'} className="nav-link">Gender</Link>
                 </li>
                 <li className="nav-item">
@@ -33,7 +64,7 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link to={'/index'} className="nav-link">Index</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav> <br/>
