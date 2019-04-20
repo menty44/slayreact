@@ -3,7 +3,22 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
 import Loader from 'react-loader-spinner';
+import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+
 // import Button from 'react-bootstrap-button-loader';
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
 
 export default class Create extends Component {
   constructor(props) {
@@ -102,10 +117,28 @@ export default class Create extends Component {
                       onChange={this.onChangeGstNumber}
                       />
                 </div>
+                <TextField
+                  id="outlined-full-width"
+                  label="Label"
+                  style={{ margin: 8 }}
+                  placeholder="Placeholder"
+                  helperText="Full width!"
+                  fullWidth
+                  margin="normal"
+                  variant="outlined"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
                 <div className="row">
                 <div className="col-md-12">
                   <input type="submit" style={{width: '100%'}} value="Register Business" className="btn btn-primary"/>
-                </div>     
+                </div>    
+                <div className="form-group">
+                <Button variant="outlined" color="secondary" id="outlined-full-width">
+                  Secondary
+                </Button>
+                </div>  
                 </div>
             </form>
             

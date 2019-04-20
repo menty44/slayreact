@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
 import Loader from 'react-loader-spinner';
+import Button from '@material-ui/core/Button';
 // import Button from 'react-bootstrap-button-loader';
 
 export default class Create extends Component {
@@ -105,7 +106,12 @@ export default class Create extends Component {
                 <div className="row">
                 <div className="col-md-12">
                   <input type="submit" style={{width: '100%'}} value="Register Business" className="btn btn-primary"/>
-                </div>     
+                </div>    
+                <div>
+                <Button variant="contained" color="primary" style={{width: '100%'}} >
+                  Hello World
+                </Button>
+                </div> 
                 </div>
             </form>
             
