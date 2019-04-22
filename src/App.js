@@ -30,10 +30,12 @@ class App extends Component {
           <div className="">
   
           {/* <div className="container"></div> */}
-          
-            <nav className="navbar navbar-expand-lg navbar-light topnav"  >
-              <Link to={'/'} className="navbar-brand">React CRUD Example</Link>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">Navbar w/ text</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item">
                     <Link to={'/'} className="nav-link">Home</Link>
@@ -65,59 +67,19 @@ class App extends Component {
                   
                 
                 </ul>
+                <span class="navbar-text" style={{marginRight: '15px'}}>
+                  Logout
+                </span>
+                <span class="navbar-text" style={{marginRight: '15px'}}>
+                  Login
+                </span>
+                <span class="navbar-text">
+                  Register
+                </span>
               </div>
-              <span style={{height: '1px', background: 'pink'}}></span>
-            </nav> <br/>
-            <h2>Welcome to React CRUD Tutorial</h2> <br/>
-            <Switch>
-                <Route exact path='/create' component={ Create } />
-                <Route path='/edit/:id' component={ Edit } />
-                <Route path='/index' component={ Index } />
-  
-                <Route path='/gender/index' component={ Genderindex } />
-                <Route path='/gender/create' component={ Gendercreate } />
-  
-                <Route path='/users/index' component={ Userindex } />
-                <Route path='/users/create' component={ Usercreate } />
-  
-                <Route path='/sms/index' component={ smsindex } />
-                <Route path='/sms/create' component={ smscreate } />
-            </Switch>
-          </div>
-        </Router>
-      );
-    }else{
-      return (
-        <Router>
-          <div className="">
-  
-          {/* <div className="container"></div> */}
+            </nav>
           
-            <nav className="navbar navbar-expand-lg navbar-light topnav"  >
-              <Link to={'/'} className="navbar-brand">React CRUD Example</Link>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                
-                  <li className="nav-item">
-                    <Link to={'/gender/index'} className="nav-link">Login</Link>
-                  </li>
-                  <li className="nav-item" style={{float: 'right'}}>
-                    <Link to={'/register/create'} className="nav-link" >Register</Link>
-                  </li>
-                  
-                  {/* <li className="nav-item">
-                    <Link to={'/gender/index'} className="nav-link">Gender</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to={'/create'} className="nav-link">Create</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to={'/index'} className="nav-link">Index</Link>
-                  </li> */}
-                </ul>
-              </div>
-              <span style={{height: '1px', background: 'pink'}}></span>
-            </nav> <br/>
+             <br/>
             <h2>Welcome to React CRUD Tutorial</h2> <br/>
             <Switch>
                 <Route exact path='/create' component={ Create } />
@@ -132,13 +94,64 @@ class App extends Component {
   
                 <Route path='/sms/index' component={ smsindex } />
                 <Route path='/sms/create' component={ smscreate } />
-
-                <Route path='/register/create' component={ registercreate } />
             </Switch>
           </div>
         </Router>
       );
     }
+    // }else{
+    //   return (
+    //     <Router>
+    //       <div className="">
+  
+    //       {/* <div className="container"></div> */}
+          
+    //         <nav className="navbar navbar-dark bg-primary"  >
+    //           <Link to={'/'} className="navbar-brand">React CRUD Example</Link>
+    //           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    //             <ul className="navbar-nav mr-auto">
+                
+    //               <li className="nav-item navbar-brand">
+    //                 <Link to={'/gender/index'} className="navbar-brand">Login</Link>
+    //               </li>
+    //               <li className="nav-item" style={{float: 'right'}}>
+    //                 <Link to={'/register/create'} className="nav-link" >Register</Link>
+    //               </li>
+                  
+    //               {/* <li className="nav-item">
+    //                 <Link to={'/gender/index'} className="nav-link">Gender</Link>
+    //               </li>
+    //               <li className="nav-item">
+    //                 <Link to={'/create'} className="nav-link">Create</Link>
+    //               </li>
+    //               <li className="nav-item">
+    //                 <Link to={'/index'} className="nav-link">Index</Link>
+    //               </li> */}
+    //             </ul>
+    //           </div>
+    //           <span style={{height: '1px', background: 'pink'}}></span>
+    //         </nav> <br/>
+    //         <h2>Welcome to React CRUD Tutorial</h2> <br/>
+    //         <Switch>
+    //             <Route exact path='/create' component={ Create } />
+    //             <Route path='/edit/:id' component={ Edit } />
+    //             <Route path='/index' component={ Index } />
+  
+    //             <Route path='/gender/index' component={ Genderindex } />
+    //             <Route path='/gender/create' component={ Gendercreate } />
+  
+    //             <Route path='/users/index' component={ Userindex } />
+    //             <Route path='/users/create' component={ Usercreate } />
+  
+    //             <Route path='/sms/index' component={ smsindex } />
+    //             <Route path='/sms/create' component={ smscreate } />
+
+    //             <Route path='/register/create' component={ registercreate } />
+    //         </Switch>
+    //       </div>
+    //     </Router>
+    //   );
+    // }
     
   }
 }

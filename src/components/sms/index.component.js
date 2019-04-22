@@ -39,46 +39,46 @@ export default class smsindex extends Component {
     }
 
     render() {
-      console.log('cheki index wewe', this.state.sms.length)
-      console.log('cheki index wewe lodash', _.size(this.state.sms))
-      if(_.size(this.state.sms) > 0){
-        return (
-          <div>
-            <button onClick={this.routeChange} type="submit" style={{width: '100%'}} className="btn btn-primary">Send New Message</button>
+        console.log('cheki index wewe', this.state.sms.length)
+        console.log('cheki index wewe lodash', _.size(this.state.sms))
+        if(_.size(this.state.sms) > 0){
+            return (
+            <div>
+                <button onClick={this.routeChange} type="submit" style={{width: '100%'}} className="btn btn-primary">Send New Message</button>
+                
+                <h3 align="center">messages List</h3>
+                <table className="table table-striped" style={{ marginTop: 20 }}>
+                <thead>
+                    <tr>
+                    <th>Number</th>
+                    <th>Message</th>
+                    <th colSpan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { this.tabRow() }
+                </tbody>
+                </table>
+            </div>
+            );
+        }else{
+            return (
+            <div className="row">
+                <div className="col-md-5"></div>
+                <div className="col-md-2">
+                <span style={{float: 'centre'}}>
+                    <Loader 
+                    type="Oval"
+                    color="#00BFFF"
+                    height="100"	
+                    width="100"
+                    />
+                    </span></div>
+                <div className="col-md-5"></div>
+            </div>
             
-            <h3 align="center">messages List</h3>
-            <table className="table table-striped" style={{ marginTop: 20 }}>
-              <thead>
-                <tr>
-                  <th>Number</th>
-                  <th>Message</th>
-                  <th colSpan="2">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                { this.tabRow() }
-              </tbody>
-            </table>
-          </div>
-        );
-      }else{
-        return (
-          <div className="row">
-              <div className="col-md-5"></div>
-              <div className="col-md-2">
-              <span style={{float: 'centre'}}>
-                <Loader 
-                  type="Oval"
-                  color="#00BFFF"
-                  height="100"	
-                  width="100"
-                />
-                </span></div>
-              <div className="col-md-5"></div>
-          </div>
-         
-          );
-      }
+            );
+        }
       
     }
     
